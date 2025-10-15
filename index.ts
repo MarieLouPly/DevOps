@@ -13,7 +13,7 @@ async function handler(_req: Request): Promise<Response> {
     handlePreFlightRequest();
   }
 
-  const url = new URL (req_.url);
+  const url = new URL(_req.url);
   const word = url.searchParams.get('word');
 
   const headers = new Headers();
